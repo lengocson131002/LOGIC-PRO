@@ -12,7 +12,7 @@ const ReferralProgram = () => {
         <section>
             <Container>
                 <ReferralProgramStyled>
-                    <div class="referral-content">
+                    <div className="referral-content">
                         <span>REFERRAL PROGRAM</span>
                         <p>The Logic Pro referral program was created as an additional way for our investors to make money. By attracting new investors to join us, our members are getting an additional source of income. The referral program has three levels of participation, with the following percentage accordingly: 5%, 2% and 1%.</p>
                         <LinkButton
