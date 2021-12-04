@@ -8,7 +8,7 @@ const MobileNavigationStyled = styled.div`
     background-size: cover;
     display: none;
     padding: 2rem 6rem 2rem 6rem;
-    max-height:${props => props.close ? "10rem" : "50rem"};
+    max-height:${props => props.close ? "10rem" : "60rem"};
     overflow: hidden;
     transition: all 0.8s;
     box-shadow:3px 5px 15px 2px rgba(0, 0, 0, 0.3);
