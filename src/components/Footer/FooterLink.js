@@ -38,7 +38,7 @@ const FooterLink = (props) => {
     return (
         <FooterLinkStyled>
             <HiOutlineArrowNarrowRight className="arrow-icon" />
-            <NavLink to={props.to}>{props.link}</NavLink>
+            <NavLink to={props.to}>{props.name}</NavLink>
         </FooterLinkStyled>
     )
 }

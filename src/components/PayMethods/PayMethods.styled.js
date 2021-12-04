@@ -13,6 +13,10 @@ const PayMethodsStyled = styled.div`
     & img{
         flex: 1;
         max-width: 10rem;
+
+        @media (max-width: 768px) {
+            max-width: 8rem;
+        }
     }
 `;
 export default PayMethodsStyled;

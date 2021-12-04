@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import GetStartedStyled from './GetStarted.styled';
 import Container from '../../UI/Container';
 import { AiOutlineForm } from "react-icons/ai";
 import { AiOutlineLineChart } from "react-icons/ai";
 import { AiOutlineFileSearch } from "react-icons/ai";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const GetStarted = () => {
+    useEffect(() => {
+        AOS.init();
+    }, []);
     return (
         <section>
             <Container>
                 <GetStartedStyled>
                     <p>GET STARTED</p>
-                    <div>
+                    <div data-aos="fade-up">
                         <div className="step-block">
                             <div className="step-content">
                                 <div className="step-header">

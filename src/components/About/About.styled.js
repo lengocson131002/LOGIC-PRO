@@ -1,83 +1,98 @@
 import styled from 'styled-components';
-import Container from '../../UI/Container';
 import LinkButton from '../../UI/LinkButton';
 
-const AboutStyled = styled(Container)`
+const AboutStyled = styled.div`
     display: flex;
-    padding: 10rem;
-    gap: 10rem;
-
+    padding: 5rem 0;
 
     & .about-left {
-        position: relative;
+        display: flex;
+        align-items: start;
+        justify-content: end;
+        gap: 3rem;
+        color: ${props => props.theme.colors.primary};
         width: 50%;
-        height: 100%;
+        padding: 2rem 5rem;
 
-        & .about-logo {
-            transform: translateX(-30%);
-            width: 90rem;
-        }
 
-        & .about-info {
-            position: absolute;
+
+        & .about-registration {
+            width: 50%;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-            right: -8rem;
-            bottom: -5rem;
-            color: ${props => props.theme.colors.primary};
-            width: 40rem;
+            flex-direction: column;
+            gap: 3rem;
+            font-weight: lighter;
+            font-size: 1.7rem;
 
-            & .about-cert {
-                width: 20rem;
+            h2 {
+                font-size: 2.4rem;
             }
-
-            & .about-registration {
-                width: 50%;
-                padding: 2rem 0;
-                display: flex;
-                flex-direction: column;
-                gap: 3rem;
-                font-weight: lighter;
-                font-size: 1.6rem;
-
-                h2 {
-                    font-size: 2rem;
-                }
-                h4 {
-                    font-size: 1.5rem;
-                    color: #fff;
-                    margin-bottom: 1rem;
-                }
-
+            h4 {
+                font-size: 2rem;
+                color: #fff;
+                margin-bottom: 1rem;
             }
 
         }
+
     }
+
 
     //Style about right
     & .about-right{
-        display: flex;
-        flex-direction: column;
-        gap: 5rem;
         width: 50%;
         color: ${props => props.theme.colors.primaryLight};
         font-weight: lighter;
         letter-spacing: 0px;
         line-height: 1.2;
         font-size: 2rem;
-        padding: 0 3rem;
+        padding: 0 4rem;
 
         & h1 {
             font-size: 5rem;
+            margin-bottom: 2rem;
         }
         & ${LinkButton} {
-            margin-top: 2rem;
+            margin-top: 4rem;
             display: flex; 
             gap: 1rem;
         }
 
+    }
+
+    @media(max-width: 1024px) {
+        flex-direction: column;
+        gap:3rem;
+        padding: 5rem 0;
+
+        .about-left {
+            width: 100%;
+            justify-content: center; 
+            
+            .about-registration {
+                font-size: 1.4rem;
+                h2 {
+                    font-size: 2rem;
+                }
+
+                h4 {
+                    font-size: 1.7rem;
+                }
+             }
+        }
+        .about-right {
+            width: 100%;
+            font-size: 1.7rem;
+            padding: 0 2rem;
+
+            h1 {
+                font-size: 4rem;
+            }
+
+        }
+
+
+    
     }
 `;
 export default AboutStyled;

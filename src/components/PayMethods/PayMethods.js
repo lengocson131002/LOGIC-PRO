@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PayMethodsStyled from './PayMethods.styled';
 import Container from "../../UI/Container";
 
@@ -14,11 +14,16 @@ import pay8 from '../../asset/pay/pay_8.png';
 import pay9 from '../../asset/pay/pay_9.png';
 import pay10 from '../../asset/pay/pay_10.png';
 import pay11 from '../../asset/pay/pay_11.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const PayMethods = () => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
         <Container>
-            <PayMethodsStyled>
+            <PayMethodsStyled data-aos="fade-up">
                 <img src={pay1} alt="" />
                 <img src={pay2} alt="" />
                 <img src={pay3} alt="" />

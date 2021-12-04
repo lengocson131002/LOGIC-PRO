@@ -9,6 +9,10 @@ const NewsItemStyled = styled.div`
     position: relative;
     font-weight: 300;
     max-width: 45rem;
+
+    @media(max-width: 768px) {
+        margin: 0 auto;
+    }
     & div {
         position: absolute;
         top: 3rem;

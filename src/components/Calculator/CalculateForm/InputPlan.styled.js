@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 const InputPlanStyled = styled.div`
     font-size: 2rem;
     display: flex;
@@ -10,21 +9,31 @@ const InputPlanStyled = styled.div`
         display: flex;
         flex-direction: column;
         gap: 4rem;
+ 
+        @media(max-width: 1024px) {
+           .input-range {
+                display: none;
+            }
+        }
         
         & .input {
             display: flex;
+            gap: 2rem;
             justify-content: space-between;
-            align-items: center;
             color: #fff;
+
+            @media(max-width: 1200px) {
+                flex-direction: column;
+            }
             
             & h4 {
-                font-size: 3rem;
+                font-size: 2.4rem;
                 color: ${props => props.theme.colors.secondary};
             }
             
             & .plans {
                 display: flex;
-                justify-content: space-between;
+                justify-content:start;
                 align-items: center;
                 gap: 1rem;
 
@@ -37,6 +46,11 @@ const InputPlanStyled = styled.div`
                     font-weight: normal;
                     cursor: pointer;
                 }
+
+                & div.chosen {
+                    background-color: ${props => props.theme.colors.primary};
+                    color: ${props => props.theme.colors.tertiary};
+                }
             }
 
             & input{
@@ -46,6 +60,7 @@ const InputPlanStyled = styled.div`
                 border-radius: 5px;
                 color: #fff;
                 font-size: 1.6rem;
+                width: 100%;
                 background: ${props => props.theme.colors.tertiary};
               
             }
@@ -72,7 +87,13 @@ const InputPlanStyled = styled.div`
     & .plan-values {
         display: flex;
         flex-direction: column;
+        align-items: end;
         gap: 2rem;
+        min-width: 30%;
+
+        @media(max-width: 768px) {
+            align-items: start;
+         }
 
         & .plan-value {
             & h4 {
@@ -82,10 +103,13 @@ const InputPlanStyled = styled.div`
             }
 
             & div { 
-                text-align: right;
                 font-size: 3.5rem;
                 margin-bottom: .5rem;
                 color: ${props => props.theme.colors.tertiary};
+
+                @media (max-width: 768px) {
+                    font-size: 3rem;
+                }
 
                 & span {
                     font-size: 2rem;
@@ -96,6 +120,11 @@ const InputPlanStyled = styled.div`
 
         }
 
+    }
+
+    @media(max-width: 768px) {
+        flex-direction: column;
+        gap: 3rem;
     }
      
 `;

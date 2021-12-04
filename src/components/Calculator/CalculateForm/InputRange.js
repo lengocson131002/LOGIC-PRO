@@ -1,13 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Range, getTrackBackground } from 'react-range';
 import { useTheme, } from 'styled-components';
 import InputRangeStyled from './InputRange.styled';
 
 const InputRange = (props) => {
-    const [state, setState] = useState({ values: [10] });
+    const [state, setState] = useState({ values: [props.value] });
+    const { minValue, maxValue, value } = props;
+
+    useEffect(() => {
+        setState(prevValue => {
+            if (+value < minValue) {
+                return { values: [minValue] }
+            }
+            if (+value > maxValue) {
+                return { values: [maxValue] }
+            }
+            return { values: [+value] };
+        })
+    }, [value, minValue, maxValue]);
+
     const theme = useTheme();
-    const { minValue, maxValue } = props;
-    console.log(state.values[0]);
 
     return (
         <InputRangeStyled>
@@ -16,7 +28,10 @@ const InputRange = (props) => {
                 step={1}
                 min={minValue}
                 max={maxValue}
-                onChange={(values) => setState({ values })}
+                onChange={(values) => {
+                    setState({ values });
+                    props.onChange(values[0]);
+                }}
                 renderTrack={({ props, children }) => (
                     <div
                         onMouseDown={props.onMouseDown}
@@ -47,7 +62,7 @@ const InputRange = (props) => {
                         </div>
                     </div>
                 )}
-                renderThumb={({ props, isDragged }) => (
+                renderThumb={({ props }) => (
                     <div
                         {...props}
                         className="thumb"
@@ -60,7 +75,6 @@ const InputRange = (props) => {
                 )}
             />
         </InputRangeStyled >
-    )
+    );
 }
-
-export default InputRange
+export default InputRange;

@@ -1,29 +1,25 @@
 import Theme from './Theme';
 import GlobalStyle from './Global/GlobalStyled';
-import HeaderSection from './components/HeaderSection/HeaderSection';
-import About from './components/About/About';
-import Calculate from './components/Calculator/Calculate';
-import PayMethods from './components/PayMethods/PayMethods';
-import GetStarted from './components/GetStarted/GetStarted';
-import WhyBlock from './components/WhyBlock/WhyBlock';
-import ReferralProgram from './components/ReferralProgram/ReferralProgram';
-import News from './components/News/News';
-import Footer from './components/Footer/Footer';
+import HomePage from './Pages/HomePage';
+import {
+  Routes,
+  Route,
+} from 'react-router-dom';
+import LoginPage from './Pages/LoginPage';
+import RegistrationPage from './Pages/RegistrationPage';
+import ResetPasswordPage from './Pages/ResetPasswordPage';
 
 
 function App() {
   return (
     <Theme>
       <GlobalStyle />
-      <HeaderSection />
-      <About />
-      <Calculate />
-      <PayMethods />
-      <GetStarted />
-      <WhyBlock />
-      <ReferralProgram />
-      <News />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/reset-password" element={<ResetPasswordPage />} />
+        <Route path="/registration" element={<RegistrationPage />} />
+      </Routes>
     </Theme>
   );
 }

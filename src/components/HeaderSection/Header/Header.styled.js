@@ -96,5 +96,8 @@ const HeaderStyled = styled.div`
           gap: 2rem;
         }
       }
+      @media (max-width: 780px) {
+        display: none;
+      }
   `
 export default HeaderStyled;

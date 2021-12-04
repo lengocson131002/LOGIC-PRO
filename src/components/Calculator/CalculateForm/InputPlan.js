@@ -1,40 +1,67 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import InputPlanStyled from './InputPlan.styled';
 import InputRange from './InputRange';
 
-const InputPlan = (props) => {
+const InputPlan = ({ chosenPlan, onChangePlan }) => {
+    const [value, setValue] = useState(chosenPlan.min);
+
+    const dailyProfit = (chosenPlan.percent * value).toFixed(2);
+    const totalProfit = (dailyProfit * chosenPlan.numOfDays).toFixed(2);
+
+    useEffect(() => {
+        setValue(chosenPlan.min);
+    }, [chosenPlan]);
+
+    const changeInputHandlerByInput = (e) => {
+        const newValue = e.target.value;
+        setValue(newValue);
+    }
+    const changeInputHandlerByRange = (value) => {
+        setValue(value);
+    }
+
     return (
         <InputPlanStyled>
             <div className="plan-input">
                 <div className="input">
-                    <h4>CHOOSE PLAN : </h4>
+                    <h4>CHOOSE PLAN </h4>
                     <div className="plans">
-                        <div>2% DAILY</div>
-                        <div>2.5% DAILY</div>
-                        <div>3% DAILY</div>
+                        <div onClick={() => {
+                            onChangePlan(1);
+                        }}
+                            className={chosenPlan.type === 1 ? "chosen" : ""} >2% DAILY</div>
+                        <div onClick={() => {
+                            onChangePlan(2);
+                        }}
+                            className={chosenPlan.type === 2 ? "chosen" : ""} >2.5% DAILY</div>
+                        <div onClick={() => {
+                            onChangePlan(3);
+                        }}
+                            className={chosenPlan.type === 3 ? "chosen" : ""} >3% DAILY</div>
                     </div>
                 </div>
-                <div className="input">
-                    <h4>ENTER AMOUNT : </h4>
+                <div className="input ">
+                    <h4>ENTER AMOUNT  </h4>
                     <div className="input-amount">
-                        <input type="number" min="10" />
+                        <input type="number" min={chosenPlan.min} value={value} onChange={changeInputHandlerByInput} />
                         <p>USD</p>
                     </div>
                 </div>
-
-                <InputRange minValue={10} maxValue={1000000} />
+                <div className="input-range">
+                    <InputRange minValue={chosenPlan.min} maxValue={chosenPlan.max} value={value} onChange={changeInputHandlerByRange} />
+                </div>
 
             </div>
             <div className="plan-values">
                 <div className="plan-value">
                     <h4>DAILY PROFIT: </h4>
-                    <div>{(3000).toFixed(2)}
+                    <div>{dailyProfit}
                         <span>USD</span>
                     </div>
                 </div>
                 <div className="plan-value">
                     <h4>TOTAL PROFIT: </h4>
-                    <div>{(3043434.988).toFixed(2)}
+                    <div>{totalProfit}
                         <span>USD</span>
                     </div>
                 </div>
@@ -43,6 +70,5 @@ const InputPlan = (props) => {
 
     )
 }
-
 
 export default InputPlan;

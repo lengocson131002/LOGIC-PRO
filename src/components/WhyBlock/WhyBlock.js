@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import WhyBlockStyled from './WhyBlock.styled';
 import Container from '../../UI/Container';
 import { AiOutlineWallet } from 'react-icons/ai';
 import { AiOutlineSetting } from 'react-icons/ai';
 import { AiOutlineLock } from 'react-icons/ai';
 import { BsCoin } from 'react-icons/bs';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const WhyBlock = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 800
+        });
+    }, []);
     return (
         <section>
             <Container>
-                <WhyBlockStyled>
+                <WhyBlockStyled data-aos="fade-up">
                     <span>Why choose us?</span>
                     <div>
                         <div className="why-item">

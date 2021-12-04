@@ -7,7 +7,8 @@ const theme = {
         secondary: '#c28a61',
         tertiary: '#322318',
         background: '#634631',
-        body: 'red',
+        warning: '#f59f00',
+        error: '#e03131'
     },
     breakpoints: {
 

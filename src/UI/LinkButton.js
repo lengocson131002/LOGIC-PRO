@@ -9,8 +9,8 @@ const LinkButton = styled(NavLink).attrs(props => ({
     align-items: center;
     text-decoration: none;
 
-    font-size:${props => props.fontsize || "1.7rem"};
-    font-weight: ${props => props.fontweight || 'normal'};
+    font-size:${props => props.fsize || "1.7rem"};
+    font-weight: ${props => props.fweight || 'normal'};
     color: ${props => props.color || '#000'};
     background:${props => props.background || 'none'};
 

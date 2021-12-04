@@ -14,5 +14,12 @@ const NewsStyled = styled.div`
     & button:nth-child(1) {
         left: -4rem;
     }
+
+    @media(max-width: 1023px) {
+        button {
+            display: none !important;
+        }
+    }
+
 `;
 export default NewsStyled;

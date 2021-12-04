@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
     html {
         font-size: 62.5%;
+        scroll-behavior: smooth;
     }
     * {
         padding: 0;
@@ -13,7 +14,8 @@ const GlobalStyle = createGlobalStyle`
         background: ${({ theme }) => theme.colors.background};
         font-family: 'Roboto Condensed', sans-serif;
         color: #fff;
-       /* color:  #ffe7bc; */
+        overflow-x: hidden;
+        position: relative;
     }
 
     img {

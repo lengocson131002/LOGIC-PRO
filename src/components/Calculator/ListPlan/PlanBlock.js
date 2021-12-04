@@ -3,7 +3,7 @@ import PlanBlockStyled from './PlanBlock.styled';
 
 const PlanBlock = (props) => {
     return (
-        <PlanBlockStyled>
+        <PlanBlockStyled onClick={() => { props.onClick() }} className={props.className}>
             <div className="plan-title">{props.dailyPercent}% DAILY</div>
             <div className="plan-subtitle">FOR {props.numOfDays} DAYS</div>
             <div className="plan-text">

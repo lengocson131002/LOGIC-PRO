@@ -1,12 +1,13 @@
 import styled from "styled-components";
-const Button = styled.div`
-     display: flex;
+const Button = styled.button`
+    display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    gap: 1rem;
 
-    font-size:${props => props.fontsize || "1.7rem"};
-    font-weight: ${props => props.fontweight || 'normal'};
+    font-size:${props => props.fsize || "1.7rem"};
+    font-weight: ${props => props.fweight || 'normal'};
     color: ${props => props.color || '#000'};
     background:${props => props.background || 'none'};
 

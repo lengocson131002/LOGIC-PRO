@@ -1,15 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import InfoBlockStyled from './InfoBlock.styled';
 import LinkButton from '../../../UI/LinkButton';
 import { FaArrowRight } from 'react-icons/fa';
 import InfoStatus from './InfoStatus';
 import { useTheme } from 'styled-components';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const InfoBlock = (props) => {
+    useEffect(() => {
+        AOS.init({
+            duration: 500
+        });
+    }, []);
     const theme = useTheme();
     return (
         <InfoBlockStyled>
-            <div className="info-top">
+            <div className="info-top" data-aos="fade-right" >
                 <h1 className="banner">
                     YOU DREAM IT,
                     <span>WE HELP</span>
@@ -21,7 +28,7 @@ const InfoBlock = (props) => {
                     className="btn-cta"
                     background={theme.colors.primary}
                     clickbackground="#ffb83d"
-                    fontweight="bold"
+                    fweight="bold"
                 >
                     GET START NOW
                     <FaArrowRight className="btn-cta__icon" />
@@ -33,15 +40,15 @@ const InfoBlock = (props) => {
                     href="#"
                     background={theme.colors.primary}
                     color="#000"
-                    fontsize="2rem"
-                    fontweight="bold"
+                    fsize="2rem"
+                    fweight="bold"
                 >Last Investments</LinkButton>
                 <LinkButton
                     href="#"
                     color={theme.colors.primary}
                     background={theme.colors.tertiary}
-                    fontsize="2rem"
-                    fontweight="bold"
+                    fsize="2rem"
+                    fweight="bold"
                 >Last Withdrawls</LinkButton>
             </div>
         </InfoBlockStyled >

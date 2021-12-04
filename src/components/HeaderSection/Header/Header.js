@@ -5,6 +5,7 @@ import React from 'react';
 import ListContact from '../../Contacts/ListContact';
 import LinkButton from '../../../UI/LinkButton';
 import { NavLink } from 'react-router-dom';
+// import { HashLink } from 'react-router-hash-link';
 import { useTheme } from 'styled-components';
 
 const Header = (props) => {
@@ -17,7 +18,7 @@ const Header = (props) => {
                 <div className="header-top">
                     <div className="logo">
                         <NavLink
-                            to="#"
+                            to="/"
                             className="logo-image">
                             <img src={logo} alt="" />
                         </NavLink>
@@ -42,31 +43,31 @@ const Header = (props) => {
                 </div>
                 <div className="header-bottom">
                     <nav className="nav-bottom">
-
                         <div >
                             <NavLink
-                                to="/home"
-                                className={({ isActive }) => "nav-link" + (isActive ? " activated" : "")}
+                                to="/"
+                                className="nav-link"
                             >Home</NavLink>
                         </div>
                         <div >
-                            <NavLink
-                                className={({ isActive }) => "nav-link" + (isActive ? " activated" : "")}
-                                to="/about">About us</NavLink></div>
+                            <a
+                                href="#about"
+                                className="nav-link"
+                            >About us</a></div>
                         <div >
-                            <NavLink
-                                className={({ isActive }) => "nav-link" + (isActive ? " activated" : "")}
-                                to="/investment">Investment Plans</NavLink>
+                            <a
+                                className="nav-link"
+                                href="#investment">Investment Plans</a>
+                        </div>
+                        <div >
+                            <a
+                                className="nav-link"
+                                href="#referral">Refferal Program</a>
                         </div>
                         <div >
                             <NavLink
                                 className={({ isActive }) => "nav-link" + (isActive ? " activated" : "")}
-                                to="/ref">Refferal Program</NavLink>
-                        </div>
-                        <div >
-                            <NavLink
-                                className={({ isActive }) => "nav-link" + (isActive ? " activated" : "")}
-                                to="faq">FAQ</NavLink>
+                                to="/faq">FAQ</NavLink>
                         </div>
                         <div >
                             <NavLink
@@ -76,13 +77,13 @@ const Header = (props) => {
                     </nav>
                     <div className="actions">
                         <LinkButton
-                            href="#"
+                            href="/login"
                             color="#343a40"
                             background={theme.colors.primary}
                             clickbackground="#ffb83d"
                         >Login</LinkButton>
                         <LinkButton
-                            href="#"
+                            href="/registration"
                             color="#ffb83b"
                             clickbackground="#ffb83d"
                             clickcolor="#fff"

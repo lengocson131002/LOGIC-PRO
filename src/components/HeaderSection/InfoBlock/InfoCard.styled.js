@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const InfoCard = styled.div`
-    min-height: 140px;
     padding:3rem;
     display: flex;
     gap: 1rem;
@@ -17,7 +16,7 @@ const InfoCard = styled.div`
 
 
     & h4 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     & span {
         font-size: 2rem;
@@ -26,7 +25,7 @@ const InfoCard = styled.div`
 
     @media (max-width: 1200px) {
         & h4{
-            font-size: 3.5rem;
+            font-size: 2.5rem;
         }
         & span {
             font-size: 1.5rem;
@@ -39,6 +38,21 @@ const InfoCard = styled.div`
        & .status-icon {   
            width: 50px;
        }
+    }
+
+    @media (max-width: 768px) {
+        padding:2rem 1rem;
+
+        & .status-icon {
+            display: none;
+        }
+
+        h4 {
+            font-size:2rem;
+        }
+        span {
+            font-size: 1.4rem;
+        }
     }
   `
 export default InfoCard;
