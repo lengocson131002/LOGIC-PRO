@@ -1,7 +1,7 @@
 import React from 'react';
-import Auth from '../components/AuthModal/Auth';
-import AuthContainer from '../components/AuthModal/AuthContainer';
-import LoginForm from '../components/AuthModal/LoginForm';
+import Auth from '../components/HomePageComponents/AuthModal/Auth';
+import AuthContainer from '../components/HomePageComponents/AuthModal/AuthContainer';
+import LoginForm from '../components/HomePageComponents/AuthModal/LoginForm';
 
 const LoginPage = () => {
     return (

@@ -10,12 +10,14 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         box-sizing: border-box;
     }
+
     body {
         background: ${({ theme }) => theme.colors.background};
         font-family: 'Roboto Condensed', sans-serif;
         color: #fff;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
         position: relative;
+        font-size: 1.6rem;
     }
 
     img {

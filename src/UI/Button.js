@@ -5,6 +5,7 @@ const Button = styled.button`
     align-items: center;
     text-decoration: none;
     gap: 1rem;
+    ${({ center }) => center && `margin: 0 auto;`}
 
     font-size:${props => props.fsize || "1.7rem"};
     font-weight: ${props => props.fweight || 'normal'};
