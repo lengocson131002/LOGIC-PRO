@@ -15,6 +15,9 @@ const MobileNavigationStyled = styled.li`
     .active {
         color: ${props => props.theme.colors.secondaryLight};
     }
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+    }
 `;
 
 const MobileNavigationLink = (props) => {

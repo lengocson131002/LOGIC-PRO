@@ -7,7 +7,7 @@ const InputStyled = styled.div`
     & label {
         font-size: 1.6rem;
         font-weight: lighter;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
     }
     & input {
         border: none;
@@ -29,13 +29,14 @@ const InputStyled = styled.div`
     }
 `;
 
-const Input = (props) => {
+const InputText = ({ id, label, required, type = "text", readonly, className, value }) => {
     return (
-        <InputStyled className={props.className}>
-            <label htmlFor={props.id}>{props.label} {props.required && <span>*</span>}</label>
-            <input type={props.type || "text"} id={props.id} />
+        <InputStyled className={className}>
+            <label htmlFor={id}>{label} {required && <span>*</span>}</label>
+            {readonly ? <input type={type} id={id} value={value} readOnly /> :
+                <input type={type} id={id} value={value} />}
         </InputStyled>
     )
 };
 
-export default Input;
+export default InputText;

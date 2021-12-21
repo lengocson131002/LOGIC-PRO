@@ -7,41 +7,50 @@ const MobileNavigationStyled = styled.div`
     background: rgba(0, 0, 0, 0.5) url(${bgMobileNavigation}) 50% 50%;
     background-size: cover;
     display: none;
-    padding: 2rem 6rem 2rem 6rem;
-    max-height:${props => props.close ? "10rem" : "60rem"};
     overflow: hidden;
-    transition: all 0.8s;
-    box-shadow:3px 5px 15px 2px rgba(0, 0, 0, 0.3);
+    box-shadow:3px 3px 15px 2px rgba(0, 0, 0, 0.3);
 
     & .logo {
         display: flex;
         justify-content: space-between;
-        align-items: center;  
-    }
-
-    & .nav-top {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        margin-top: 4rem;
-        padding: 0 6rem;
-    }
-
-    & .nav-bottom {
-        margin-top: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-
-        & > div {
-            display: flex;
-            gap: 2rem;
-        }
-
+        align-items: center; 
+        padding: 2rem 4rem;
+        
         @media (max-width: 576px) {
-            flex-direction: column;
+            img {
+                width: 12rem;;
+            }
         }
+    }
+
+    & .nav {    
+        transition: all 0.8s;
+        height: fit-content;
+        max-height:${props => props.close ? "0" : "60rem"};
+       
+        & .nav-top {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem 6rem;
+         }
+
+        & .nav-bottom {
+            margin:3rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            & > div {
+                display: flex;
+                gap: 2rem;
+            }
+
+            @media (max-width: 576px) {
+                flex-direction: column;
+            }
+        }                           
     }
 
     @media (max-width: 780px) {

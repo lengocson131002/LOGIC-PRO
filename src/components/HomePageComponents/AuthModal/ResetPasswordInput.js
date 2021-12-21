@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Input from "./Input";
+import InputText from "../../General/InputText";
 import InputCode from "./InputCode";
 const ResetPasswordInputStyled = styled.div`
     display: flex;
@@ -10,7 +10,7 @@ const ResetPasswordInputStyled = styled.div`
 const ResetPasswordInput = () => {
     return (
         <ResetPasswordInputStyled>
-            <Input
+            <InputText
                 required
                 id="email"
                 label="Enter email"

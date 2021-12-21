@@ -19,7 +19,7 @@ const LinkButton = styled(NavLink).attrs(props => ({
     border-style: solid;
     border-color: ${props => props.border || 'transparent'};
 
-    width: fit-content;
+    width: ${props => props.block ? '100%' : 'fit-content'};
     border-radius: 5px;
 
     padding: 12px 23px;

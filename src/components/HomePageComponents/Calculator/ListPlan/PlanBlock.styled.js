@@ -71,10 +71,12 @@ const PlanBlockStyled = styled.div`
             margin-bottom: 2rem;
         }
         & .plan-text {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
         }
     }
     @media (max-width: 576px) {
+
+        padding: 0.5rem;
 
         & .plan-title {
             font-size: 2rem;

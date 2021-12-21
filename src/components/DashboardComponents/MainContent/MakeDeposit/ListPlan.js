@@ -7,6 +7,9 @@ const ListStyled = styled.div`
     @media(max-width: 780px) {
         gap: 1rem;
     }
+    @media(max-width: 576px) {
+        gap: 0.4rem;
+    }
 `;
 
 const ListPlan = () => {

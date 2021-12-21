@@ -7,11 +7,12 @@ const Card = styled.div`
 `;
 
 const Name = styled.div`
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     text-transform: uppercase;
     font-weight: 600;
     color: ${({ theme }) => theme.colors.primary};
     margin-bottom: 2.8rem;
+    letter-spacing: -1px;
 `;
 
 const Icon = styled.div`
@@ -19,6 +20,7 @@ const Icon = styled.div`
     display: flex;
     justify-content: end;
     font-size: 5rem;
+    margin-bottom: 2rem;
 `;
 
 

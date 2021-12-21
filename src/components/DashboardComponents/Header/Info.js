@@ -18,7 +18,7 @@ const InfoStyled = styled.div`
 
 const Info = (props) => {
     return (
-        <InfoStyled>
+        <InfoStyled className={props.className}>
             <h4>{props.title}</h4>
             <p>{props.info}</p>
         </InfoStyled>

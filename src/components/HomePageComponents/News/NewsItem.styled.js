@@ -2,17 +2,16 @@ import styled from "styled-components";
 
 
 const NewsItemStyled = styled.div`  
-    margin: 0 2rem;
+    margin:0 auto;
     background: rgba(0, 0 , 0 , 0.5);
     border-radius: 5px;
     padding:8rem 3rem 3rem 3rem; 
     position: relative;
     font-weight: 300;
-    max-width: ${props => props.display === 'block' ? "100%" : "45rem"};
+    flex: 1;
+    max-width: 92%;
+    display: block !important;
 
-    @media(max-width: 768px) {
-        margin: 0 auto;
-    }
     & div {
         position: absolute;
         top: 3rem;

@@ -4,7 +4,7 @@ const Button = styled.button`
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    gap: 1rem;
+    gap: 2rem;
     ${({ center }) => center && `margin: 0 auto;`}
 
     font-size:${props => props.fsize || "1.7rem"};

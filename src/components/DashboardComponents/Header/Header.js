@@ -7,13 +7,26 @@ const HeaderStyled = styled.div`
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: flex-end;
-    gap: 2.5rem;
-    padding: 2rem 0;
+    justify-content:space-between;
+    padding: 2rem 4rem;
+
+    @media (max-width: 1300px) {
+        gap: 5px;
+        padding: 2rem 0;
+    }
+    @media (max-width: 1024px) {
+       display:none;
+    }
 
     .buttons {
         display: flex;
         gap:1rem;
+    }
+
+    .lass-access {
+        @media (max-width: 1300px) {
+            display: none;
+        }
     }
 `;
 
@@ -29,6 +42,7 @@ const Header = () => {
                 info="abc@gmail.com"
             />
             <Info
+                className="lass-access"
                 title="LAST ACCESS"
                 info={new Date().toISOString()}
             />

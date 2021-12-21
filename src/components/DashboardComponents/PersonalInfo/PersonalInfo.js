@@ -3,7 +3,7 @@ import styled, { useTheme } from 'styled-components';
 import AuthTwoFactors from './AuthTwoFactors';
 import Balance from './Balance';
 import ReferralLink from './ReferralLink';
-import Time from './Time';
+import Timer from '../Timer/Timer'
 import LinkButton from '../../../UI/LinkButton';
 
 const PersonalInfoStyled = styled.div`
@@ -12,6 +12,13 @@ const PersonalInfoStyled = styled.div`
     gap: 5rem;
     min-width: 24rem;
     padding: 9rem 1rem 0rem 1rem;
+
+    @media (max-width: 1200px) {
+        min-width: 21.5rem;
+    }
+    @media (max-width: 1024px) {
+       display:none;
+    }
 
     ${LinkButton} {
         margin: 1.5rem auto ;
@@ -27,7 +34,7 @@ const PersonalInfo = (props) => {
 
     return (
         <PersonalInfoStyled>
-            <Time />
+            <Timer />
             <Balance />
             <ReferralLink />
             <AuthTwoFactors checked="" />

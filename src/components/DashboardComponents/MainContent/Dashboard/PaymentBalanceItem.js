@@ -3,7 +3,7 @@ const Item = styled.div`
     width: 100%;
     border-radius: 10px;
     background: rgba(0, 0,0, 0.5);
-    padding: 2rem 1rem;
+    padding:2rem 1rem;
 
     & .amount {
         display: flex;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Input from './Input';
+import InputText from '../../General/InputText';
 import InputCode from './InputCode';
 import { NavLink } from 'react-router-dom';
 
@@ -45,13 +45,13 @@ const LoginInput = () => {
     return (
         <LoginInputStyled>
             <div className="inputs-top">
-                <Input
+                <InputText
                     className="input"
                     required
                     id="username"
                     label="Username "
                 />
-                <Input
+                <InputText
                     className="input"
                     required
                     id="password"

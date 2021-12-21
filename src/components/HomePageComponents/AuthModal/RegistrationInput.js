@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import Input from './Input';
-import InputCheckBox from './InputCheckBox';
+import InputText from '../../General/InputText';
+import InputCheckBox from '../../General/InputCheckBox';
 import InputCode from './InputCode';
 const RegistrationInputStyled = styled.div`
     & .input-info {
@@ -34,40 +34,40 @@ const RegistrationInput = () => {
     return (
         <RegistrationInputStyled>
             <div className="input-info">
-                <Input
+                <InputText
                     className="input"
                     required
                     id="username"
                     label="Username "
                 />
-                <Input
+                <InputText
                     className="input"
                     required
                     id="fullname"
                     label="Full Name "
                 />
-                <Input
+                <InputText
                     className="input"
                     required
                     id="email"
                     label="Your email"
                     type="email"
                 />
-                <Input
+                <InputText
                     className="input"
                     required
                     id="confirm-email"
                     label="Confirm your email "
                     type="email"
                 />
-                <Input
+                <InputText
                     className="input"
                     required
                     id="password"
                     label="Password"
                     type="password"
                 />
-                <Input
+                <InputText
                     className="input"
                     required
                     id="confirm-password"
@@ -75,12 +75,12 @@ const RegistrationInput = () => {
                     type="password"
 
                 />
-                <Input
+                <InputText
                     className="input"
                     id="question"
                     label="Secret question "
                 />
-                <Input
+                <InputText
                     className="input"
                     id="answer"
                     label="Secret answer "

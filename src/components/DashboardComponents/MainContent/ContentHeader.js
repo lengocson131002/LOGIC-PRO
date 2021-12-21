@@ -4,6 +4,10 @@ const ContentHeader = styled.h3`
     font-size: 5rem;
     color: ${props => props.theme.colors.primary};
     font-weight: 600;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: 1024px) {
+        font-size: 4rem;
+    }
 `;
 export default ContentHeader;

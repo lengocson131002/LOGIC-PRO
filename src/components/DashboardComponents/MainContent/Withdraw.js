@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import DashboardCard from "../../DashboardCard";
+import DashboardCard from "../DashboardCard";
 import { BsCashCoin } from 'react-icons/bs';
 import { FaCoins } from 'react-icons/fa';
-import Button from "../../../../UI/Button";
-import ContentHeader from "../ContentHeader";
-import InputAmount from "../../InputAmount";
-import InputSelect from "../../InputSelect";
+import Button from "../../../UI/Button";
+import ContentHeader from "./ContentHeader";
+import InputAmount from "../../General/InputAmount";
+import InputSelect from "../../General/InputSelect";
 
 const WithdrawStyled = styled.div`
     & .inputs {
@@ -13,12 +13,24 @@ const WithdrawStyled = styled.div`
         gap: 2rem;
         margin-bottom: 5rem;
 
+        @media (max-width: 1444px) {
+            flex-direction: column;
+        }
+        @media (max-width: 1024px) {
+            flex-direction: row;
+        }
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+
         & .input-payment {
             display: flex;
+            justify-content: space-between;
             gap: 2rem;
 
             & .available-amount {
                display: flex;
+               flex-shrink: 0;
                flex-direction: column;
                justify-content: space-around;
                color: ${({ theme }) => theme.colors.primary};
@@ -51,21 +63,22 @@ const Withdraw = () => {
                     icon={<BsCashCoin />}
                     name="Payment method"
                 >
-                    <InputSelect
-                        options={options}
-                    />
-                </DashboardCard>
-                <DashboardCard
-                    icon={<FaCoins />}
-                    name="Enter amount"
-                >
                     <div className="input-payment">
-                        <InputAmount />
+                        <InputSelect
+                            options={options}
+                        />
                         <div className="available-amount">
                             <p>Available amount</p>
                             <span>0 $</span>
                         </div>
                     </div>
+                </DashboardCard>
+                <DashboardCard
+                    icon={<FaCoins />}
+                    name="Enter amount"
+                >
+                    <InputAmount />
+
                 </DashboardCard>
             </div >
             <Button
@@ -74,7 +87,7 @@ const Withdraw = () => {
                 background="#f1c069"
                 clickbackground="#ffb83d"
                 center
-            >Make deposit &rarr; </Button>
+            >WITHDRAW FUNDS &rarr; </Button>
         </WithdrawStyled >
     )
 }

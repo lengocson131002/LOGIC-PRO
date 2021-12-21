@@ -29,7 +29,12 @@ const BalanceStyled = styled.div`
         margin-top: 3rem;
         display: flex;
         justify-content: space-between;
-        gap: 3rem;
+        align-items: center;
+        gap: 2rem;
+
+        @media (max-width: 576px) {
+            flex-direction: column;
+        }
 
         & ${LinkButton} {
             flex: 1;
@@ -49,12 +54,14 @@ const Balance = () => {
             <span>0 $</span>
             <div className="actions">
                 <LinkButton
+                    block
                     background={theme.colors.primary}
                     clickbackground={theme.colors.secondaryLight}
                 >
                     MAKE A DEPOSIT &rarr;
                 </LinkButton>
                 <LinkButton
+                    block
                     border="#fff"
                     color="#fff"
                 >

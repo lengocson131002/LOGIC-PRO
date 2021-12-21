@@ -23,12 +23,16 @@ const Wrapper = styled.div`
     }
 `;
 const PaymentBalanceStyled = styled.div`
-
     display: grid;
     justify-items: center;
     gap: 8px;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+
+    @media (max-width: 480px) {
+        display: none;
+    }
+
 `;
 
 const PaymentBalance = () => {

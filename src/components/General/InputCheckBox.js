@@ -65,7 +65,7 @@ const InputCheckBox = (props) => {
     return (
         <InputCheckBoxStyled>
             {props.checked ? <input type="checkbox" name="agree" id="agree" checked /> :
-                <input type="checkbox" name="agree" id="agree" checked />
+                <input type="checkbox" name="agree" id="agree" />
             }
             <label htmlFor="agree">
                 {props.label}

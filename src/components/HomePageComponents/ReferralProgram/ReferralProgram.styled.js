@@ -25,7 +25,7 @@ const ReferralProgramStyled = styled.div`
             @media(max-width: 1024px) {
                 font-size: 4rem;
             }
-            @media(max-width: 768) {
+            @media(max-width: 768px) {
                 font-size: 3rem;
             }
 

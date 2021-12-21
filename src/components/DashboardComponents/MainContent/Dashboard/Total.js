@@ -1,7 +1,15 @@
+import styled from "styled-components"
 import TotalItem from "./TotalItem"
+const TotalWrapper = styled.div`
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+`;
 const Total = () => {
     return (
-        <div>
+        <TotalWrapper>
             <TotalItem
                 totalName="Active deposits"
                 amount="0.00"
@@ -18,7 +26,7 @@ const Total = () => {
                 totalName="Total withdraw"
                 amount="0.00"
             />
-        </div>
+        </TotalWrapper>
     )
 }
 

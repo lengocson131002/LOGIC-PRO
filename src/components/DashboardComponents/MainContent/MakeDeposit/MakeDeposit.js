@@ -4,10 +4,10 @@ import ListPlan from "./ListPlan";
 import DashboardCard from "../../DashboardCard";
 import { BsCashCoin } from 'react-icons/bs';
 import { FaCoins } from 'react-icons/fa';
-import InputAmount from "../../InputAmount";
-import InputSelect from "../../InputSelect";
+import InputAmount from "../../../General/InputAmount";
+import InputSelect from '../../../General/InputSelect';
 import { useState } from "react";
-import InputCheckBox from "../../../HomePageComponents/AuthModal/InputCheckBox";
+import InputCheckBox from '../../../General/InputCheckBox';
 import Button from "../../../../UI/Button";
 
 const MakeDepositStyled = styled.div`
@@ -15,10 +15,19 @@ const MakeDepositStyled = styled.div`
         display: flex;
         gap: 2rem;
         margin: 5rem 0;
-    }
-    & .input-payment {
-        display: flex;
-        gap: 1rem;
+
+        @media (max-width: 891px) {
+            flex-direction: column;
+        }
+
+        & .input-payment {
+            display: flex;
+            gap: 1rem;
+
+            @media (max-width: 500px) {
+            flex-direction: column;
+         }
+        }
     }
 `;
 const options = [
@@ -73,7 +82,7 @@ const MakeDeposit = () => {
                 background="#f1c069"
                 clickbackground="#ffb83d"
                 center
-            >Make deposit &rarr;</Button>
+            >MAKE DEPOSIT &rarr;</Button>
         </MakeDepositStyled>
     )
 }

@@ -12,7 +12,7 @@ const InputWrapper = styled.div`
 const Input = styled.div`
     position: relative;
     border-radius: 5px;
-    font-size: 17px;
+    font-size: 14px;
     padding: 2rem 2.5rem;
     background: #7b5940;
     border: none;
@@ -31,6 +31,7 @@ const Input = styled.div`
 `;
 
 const Menu = styled.ul`
+    z-index: 999;
     margin-top: 1px;
     list-style: none;
     width: 100%;
@@ -94,7 +95,7 @@ const InputSelect = (props) => {
     return (
         < InputWrapper ref={domNode}>
             <Input active={isActive} onClick={toggleSelectorHandler}>
-                {selected ? selected.name : "Choose one"}
+                {selected ? selected.name : "Choose"}
                 <RiArrowDropDownLine className="dropdown-icon" />
             </Input>
             <Menu active={isActive}>
@@ -102,6 +103,7 @@ const InputSelect = (props) => {
                     (<MenuItem selected onClick={() => { selectItemHandler(index) }} key={index}>{option.name}</MenuItem>) :
                     (<MenuItem onClick={() => { selectItemHandler(index) }} key={index}>{option.name}</MenuItem>)
                 )}
+
             </Menu>
         </ InputWrapper >
     )

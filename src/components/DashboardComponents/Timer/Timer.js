@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
 import Clock from './Clock';
 
-const TimeStyled = styled.div`
+const TimerStyled = styled.div`
+   
     & .date-bottom {
         display: flex;
         flex-direction: column;
@@ -15,7 +16,7 @@ const TimeStyled = styled.div`
 var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-const Time = (props) => {
+const Timer = (props) => {
     const [date, setDate] = useState(new Date());
     useEffect(() => {
         setInterval(() => {
@@ -24,14 +25,14 @@ const Time = (props) => {
     }, []);
 
     return (
-        <TimeStyled {...props}>
+        <TimerStyled {...props} >
             <Clock clock={date.toLocaleTimeString()} />
             <div className="date-bottom">
                 <span className="month-date">{months[date.getMonth()]} {date.getDate()} {date.getFullYear()}</span>
                 <span className="weekday">{days[date.getDay()]}</span>
             </div>
-        </TimeStyled>
+        </TimerStyled>
     )
 }
 
-export default Time;
+export default Timer;

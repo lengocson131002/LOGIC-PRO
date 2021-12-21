@@ -25,31 +25,33 @@ const MobileNavigation = () => {
                     close={navClose}
                     className="icon-toggle"></ToggleButton>
             </div>
-            <ul className="nav-top">
-                <MobileNavigationLink to="/home" name="Home" />
-                <MobileNavigationLink to="/about-us" name="About us" />
-                <MobileNavigationLink to="/investment-plans" name="Investment plans" />
-                <MobileNavigationLink to="/referral-program#" name="Referral Program" />
-                <MobileNavigationLink to="/faq" name="FAQ" />
-                <MobileNavigationLink to="/help" name="Help" />
-                <MobileNavigationLink to="/login" name="Login" />
-                <MobileNavigationLink to="/registration" name="Registration" />
-            </ul>
-            <div className="nav-bottom">
-                <ListContact />
-                <div>
-                    <LinkButton
-                        color="#fff"
-                        href="#"
-                        background="#6996d2"
-                        clickbackground="#0f7dea"
-                    >Representatives</LinkButton>
-                    <LinkButton
-                        color="#fff"
-                        href="#"
-                        background="#039746"
-                        clickbackground="#00c616"
-                    >Live chat</LinkButton>
+            <div className="nav">
+                <ul className="nav-top">
+                    <MobileNavigationLink to="/home" name="Home" />
+                    <MobileNavigationLink to="/about-us" name="About us" />
+                    <MobileNavigationLink to="/investment-plans" name="Investment plans" />
+                    <MobileNavigationLink to="/referral-program#" name="Referral Program" />
+                    <MobileNavigationLink to="/faq" name="FAQ" />
+                    <MobileNavigationLink to="/help" name="Help" />
+                    <MobileNavigationLink to="/login" name="Login" />
+                    <MobileNavigationLink to="/registration" name="Registration" />
+                </ul>
+                <div className="nav-bottom">
+                    <ListContact />
+                    <div>
+                        <LinkButton
+                            color="#fff"
+                            href="#"
+                            background="#6996d2"
+                            clickbackground="#0f7dea"
+                        >Representatives</LinkButton>
+                        <LinkButton
+                            color="#fff"
+                            href="#"
+                            background="#039746"
+                            clickbackground="#00c616"
+                        >Live chat</LinkButton>
+                    </div>
                 </div>
             </div>
         </MobileNavigationStyled>

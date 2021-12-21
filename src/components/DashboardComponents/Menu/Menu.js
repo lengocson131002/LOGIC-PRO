@@ -16,8 +16,16 @@ const MenuStyled = styled.div`
     padding: 6rem 2rem 0 2rem ;
     min-width: 24rem;
 
+    @media (max-width: 1200px) {
+        min-width: 20rem;
+    }
+
     & .logo {
         margin-bottom: 5rem;
+    }
+
+    @media (max-width: 1024px) {
+        display: none;
     }
 `;
 const Menu = () => {
