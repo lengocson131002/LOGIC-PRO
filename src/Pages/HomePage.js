@@ -1,13 +1,14 @@
-import HeaderSection from '../components/HomePageComponents/HeaderSection/HeaderSection';
-import About from '../components/HomePageComponents/About/About';
-import Calculate from '../components/HomePageComponents/Calculator/Calculate';
-import PayMethods from '../components/HomePageComponents/PayMethods/PayMethods';
-import GetStarted from '../components/HomePageComponents/GetStarted/GetStarted';
-import WhyBlock from '../components/HomePageComponents/WhyBlock/WhyBlock';
-import ReferralProgram from '../components/HomePageComponents/ReferralProgram/ReferralProgram';
-import News from '../components/HomePageComponents/News/News';
-import Footer from '../components/HomePageComponents/Footer/Footer';
-import MobileNavigation from '../components/HomePageComponents/MobileNavigation/MobileNavigation';
+import HeaderSection from '../Features/HomePageComponents/HeaderSection';
+import About from '../Features/HomePageComponents/About';
+import Calculate from '../Features/HomePageComponents/Calculator';
+import PayMethods from '../Features/HomePageComponents/PayMethods';
+import GetStarted from '../Features/HomePageComponents/GetStarted';
+import WhyBlock from '../Features/HomePageComponents/WhyBlock';
+import ReferralProgram from '../Features/HomePageComponents/ReferralProgram';
+import News from '../Features/HomePageComponents/News';
+import Footer from '../Features/HomePageComponents/Footer';
+import MobileNavigation from '../Components/MobileNavigation';
+
 const HomePage = () => {
     return (
         <>
@@ -25,4 +26,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default HomePage;

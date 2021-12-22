@@ -1,7 +1,7 @@
 import React from 'react';
-import Auth from '../components/HomePageComponents/AuthModal/Auth';
-import AuthContainer from '../components/HomePageComponents/AuthModal/AuthContainer';
-import ResetPasswordForm from '../components/HomePageComponents/AuthModal/ResetPasswordForm';
+import Auth from '../Features/HomePageComponents/AuthModal/Auth';
+import AuthContainer from '../Features/HomePageComponents/AuthModal/AuthContainer';
+import ResetPasswordForm from '../Features/HomePageComponents/AuthModal/ResetPasswordForm';
 
 const ResetPasswordPage = () => {
     return (

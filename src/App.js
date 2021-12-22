@@ -1,5 +1,5 @@
 import Theme from './Theme';
-import GlobalStyle from './Global/GlobalStyled';
+import GlobalStyle from './Components/GlobalStyles';
 import HomePage from './Pages/HomePage';
 import DashboardPage from './Pages/DashboardPage';
 import {

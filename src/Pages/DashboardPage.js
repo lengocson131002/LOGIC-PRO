@@ -1,9 +1,9 @@
-import Header from "../components/DashboardComponents/Header/Header";
+import Header from "../Features/DashboardComponents/Header";
 import styled from 'styled-components';
-import Menu from "../components/DashboardComponents/Menu/Menu";
-import PersonalInfo from "../components/DashboardComponents/PersonalInfo/PersonalInfo";
-import MainContent from "../components/DashboardComponents/MainContent/MainContent";
-
+import Menu from "../Features/DashboardComponents/Menu";
+import PersonalInfo from "../Features/DashboardComponents/PersonalInfo";
+import MainContent from "../Features/DashboardComponents/MainContent";
+import MobileNavigation from '../Components/MobileNavigation';
 const Wrapper = styled.div`
     display: flex;
     width: 100%;
@@ -15,14 +15,19 @@ const Wrapper = styled.div`
 
 const DashboardPage = () => {
     return (
-        <Wrapper>
-            <Menu />
-            <div className="dashboard-content">
-                <Header />
-                <MainContent />
-            </div>
-            <PersonalInfo />
-        </Wrapper>
+        <>
+            <MobileNavigation
+                sticky
+            />
+            <Wrapper>
+                <Menu />
+                <div className="dashboard-content">
+                    <Header />
+                    <MainContent />
+                </div>
+                <PersonalInfo />
+            </Wrapper>
+        </>
     )
 }
 
