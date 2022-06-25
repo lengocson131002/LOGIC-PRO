@@ -36,7 +36,15 @@ import coin12 from '../asset/pay-dashboard/coin12.png';
 import coin13 from '../asset/pay-dashboard/coin13.png';
 import coin14 from '../asset/pay-dashboard/coin14.png';
 
+//Plan Block background
+import bgPlan from '../asset/item-background/bgplan.png';
+
+import man from '../asset/background/pic_1.png';
+
+import logo from '../asset/logo/logo-top.png';
+
 const Images = {
+    LOGO: logo,
     HEADER_BG: background_header,
     statuses: {
         STAT_1: stat_1,
@@ -77,7 +85,9 @@ const Images = {
         COIN_12: coin12,
         COIN_13: coin13,
         COIN_14: coin14,
-    }
+    },
+    PLAN_BG: bgPlan,
+    MAN: man
 
 }
 

@@ -7,7 +7,7 @@ const MobileNavigationStyled = styled.div`
     position:${({ sticky }) => sticky ? 'sticky' : 'relative'};
     top: 0;
     left:0;
-    background: rgba(0, 0, 0, 0.5) url(${bgMobileNavigation}) 50% 50%;
+    background: rgba(0, 0, 0, 0.8) url(${bgMobileNavigation}) 50% 50%;
     background-size: cover;
     display: none;
     overflow: hidden;
@@ -58,7 +58,7 @@ const MobileNavigationStyled = styled.div`
         }                           
     }
 
-    @media (max-width: 780px) {
+    @media (max-width: ${({ breakpoint }) => breakpoint}) {
         display: block;
     }
 `

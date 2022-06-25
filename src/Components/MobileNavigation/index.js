@@ -1,21 +1,29 @@
 import ListContact from "../Contacts";
 import MobileNavigationStyled from "./MobileNavigation.styled";
 import MobileNavigationLink from "./MobileNavigationLink";
-import { LinkButton, ToggleButton } from "../Buttons";
+import { LinkButton } from "../Buttons";
+import ToggleButton from "./ToggleButton";
 import logo from '../../asset/logo/logo-top.png';
 import { NavLink } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import useClickOutSide from "../../Hooks/useClickOutSide";
 
 const MobileNavigation = (props) => {
     const [navClose, setNavClose] = useState(true);
+    const domNode = useRef();
 
     const toggleNavHandler = () => {
         setNavClose(prevState => !prevState);
     }
 
+    useClickOutSide(() => {
+        setNavClose(true);
+    }, domNode);
+
     return (
         <MobileNavigationStyled
             {...props}
+            ref={domNode}
             close={navClose}>
             <div className="logo">
                 <NavLink to="/home">

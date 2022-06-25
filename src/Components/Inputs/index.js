@@ -1,0 +1,5 @@
+export { default as InputText } from './InputText'
+export { default as InputAmount } from './InputAmount'
+export { default as InputCheckbox } from './InputCheckBox'
+export { default as InputSelect } from './InputSelect'
+export { default as InputWithIcon } from './InputWithIcon'
